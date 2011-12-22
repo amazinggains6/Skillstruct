@@ -40,6 +40,14 @@
 		<%= f.label :attendance %>
 		<%= f.number_field :attendance %>
 	</p>
+	<p>
+		<%= f.label :state %>
+		<%= select_tag :state, options_for_select(us_states) %>
+	</p>
+	<p>
+		<%= f.label :zipcode %>
+		<%= f.number_field :cost %>
+	</p>
 	
 	<%= f.submit %>
 <% end %>
