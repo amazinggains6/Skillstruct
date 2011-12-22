@@ -5,12 +5,16 @@
       <li><%= link_to "Home", root_path %></li>
       <% if user_signed_in? %>
 	  <li>Signed in as <%= current_user.email %></li>
-	  <li><%= link_to "Account", root_path %></li>
-	  <li><%= link_to "Settings", root_path %></li>
+	  <li><%= link_to "Dashboard", root_path %></li>
+	  <li><%= link_to "Profile", current_user %></li>
+	  <li><%= link_to "Settings", edit_user_registration_path %></li>
+	  <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete %></li>
 	  <% else %>
 	  <li><%= link_to "Sign up", new_user_registration_path %></li>
 	  <li><%= link_to "Sign in", new_user_session_path %></li>
       <% end %>
+	  <li><%= link_to "Learn", courses_path %></li>
+	  <li><%= link_to "Teach", courses_path %><li>
       <li><%= link_to "Help", root_path %></li>
     </ul>
   </nav>

@@ -1,0 +1,10 @@
+<%= form_for(@course, @enrollment) do |f| %>
+<%= f.error_messages %>
+	<p>
+		<%= f.label :course %>
+	<br><%= f.text_field :select_courses %> </br>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+	</p>
+	<%= f.submit %>
+<% end %>

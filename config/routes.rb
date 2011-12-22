@@ -1,12 +1,21 @@
 Subscripty::Application.routes.draw do
-  
   devise_for :users
-
+  resources :users
+  resources :courses
+  resources :enrollments
+  resources :relationships, :only => [:create, :destroy]
+  
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   root :to => 'pages#home'
   
+  resources :users do
+      member do
+        get :following, :followers
+      end
+    end
+    
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

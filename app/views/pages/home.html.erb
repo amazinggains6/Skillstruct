@@ -6,3 +6,12 @@
       sample application.
     </p>
 <%= link_to "Sign up now!", '#', :class => "signup_button round" %>
+
+<% if user_signed_in? %>
+  <%= render 'courses/feed' %>
+<% else %>
+  <p>Sign Up!</p>
+<% end %>
+
+
+
