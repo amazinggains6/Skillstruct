@@ -1,53 +1,21 @@
-<%= form_for(@course) do |f| %>
+<%= simple_form_for(@course) do |f| %>
 <%= f.error_messages %>
-	<p>
-		<%= f.label :name %>
-		<%= f.text_field :name %>
-	</p>
-	<p>
-		<%= f.label :description %>
-		<%= f.text_area :description %>
-	</p>
-	<p>
-		<%= f.label :credentials %>
-		<%= f.text_area :credentials %>
-	</p>
-	<p>
-		<%= f.label :place %>
-		<%= f.text_field :place %>
-	</p>
-	<p>
-		<%= f.label :start_date %>
-		<%= f.date_select :startdate %>
-	</p>
-	<p>
-		<%= f.label :start_time %>
-		<%= f.time_select :starttime %>
-	</p>
-	<p>
-		<%= f.label :end_date %>
-		<%= f.date_select :enddate %>
-	</p>
-	<p>
-		<%= f.label :end_time %>
-		<%= f.time_select :endtime %>
-	</p>
-	<p>
-		<%= f.label :cost %>
-		<%= f.number_field :cost %>
-	</p>
-	<p>
-		<%= f.label :attendance %>
-		<%= f.number_field :attendance %>
-	</p>
-	<p>
-		<%= f.label :state %>
-		<%= select_tag :state, options_for_select(us_states) %>
-	</p>
-	<p>
-		<%= f.label :zipcode %>
-		<%= f.number_field :cost %>
-	</p>
+	<%= f.input :name %>
+	<%= f.input :description%>
+	<%= f.input :category, :collection => (categories_list)%>
+	<%= f.input :credentials %>
+	<%= f.input :cost %>
+	<%= f.input :place %>
+	<%= f.input :startdate %>
+	<%= f.input :starttime%>
+	<%= f.input :enddate %>
+	<%= f.input :endtime%>
+	<%= f.input :attendance %>
+	<%= f.input :state, :collection => (us_states)%>
+	<%= f.input :zipcode %>
+	<%= f.button :submit %>
 	
-	<%= f.submit %>
 <% end %>
+	
+	
+	

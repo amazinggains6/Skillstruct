@@ -68,4 +68,15 @@ module ApplicationHelper
           ['Wyoming', 'WY']
         ]
     end
+    
+    def categories_list
+      [
+        ['Cooking'],
+        ['Sports'],
+        ['Music'],
+        ['Tutoring'],
+        ['Design'],
+        ['Programming']
+      ]
+    end
 end

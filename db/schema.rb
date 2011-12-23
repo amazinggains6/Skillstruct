@@ -16,6 +16,9 @@ ActiveRecord::Schema.define(:version => 20111221212844) do
   create_table "courses", :force => true do |t|
     t.string   "name"
     t.string   "place"
+    t.string   "state"
+    t.string   "zipcode"
+    t.string   "category"
     t.text     "description"
     t.text     "credentials"
     t.date     "startdate"

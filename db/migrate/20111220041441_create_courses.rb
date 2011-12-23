@@ -3,6 +3,9 @@ class CreateCourses < ActiveRecord::Migration
     create_table :courses do |t|
       t.string    :name
       t.string    :place
+      t.string    :state
+      t.string    :zipcode
+      t.string    :category
       t.text      :description
       t.text      :credentials
       t.date      :startdate
