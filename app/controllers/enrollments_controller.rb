@@ -8,8 +8,9 @@ class EnrollmentsController < ApplicationController
   end
   
   def destroy
-    @course = Enrollment.find(params[:id]).enrolled
+    @course = Enrollment.find(params[:id]).course
     current_user.unenroll!(@course)
+    flash[:notice] = "You have successfully removed yourself from this class."
     redirect_to @course
   end
   

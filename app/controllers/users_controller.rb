@@ -1,9 +1,10 @@
 class UsersController < ApplicationController
   
-  before_filter :find_user
+  before_filter :find_user, :except => [:dashboard]
   
   def show
     @title = @user.id
+    @enrollments = @user.enrollments
   end
   
   def find_user
@@ -26,6 +27,16 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
       @users = @user.followers
       render 'show_follow'
+  end
+  
+  def dashboard
+    @title = "Dashboard"
+    if user_signed_in?
+    @feed_items = current_user.feed
+    end
+    @enrollments = current_user.enrollments
+    @user = current_user
+    @courses = Course.find(:all, :conditions => [ "user_id IN (?)", current_user.id], :limit => 50)
   end
   
 end

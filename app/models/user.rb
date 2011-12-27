@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname, :bio, :zipcode, :state
+  attr_accessible :email, :password, :password_confirmation, :remember_me, :firstname, :lastname, :bio, :zipcode, :state, :earnings, :hours_taught, :hours_learned 
   
   has_many :courses
   has_many :enrollments, :dependent => :destroy
@@ -23,11 +23,11 @@ class User < ActiveRecord::Base
   end
   
   def enrolled?(course)
-    
+    enrollments.find_by_course_id(course)
   end
   
   def unenroll!(course)
-    
+    enrollments.find_by_course_id(course).destroy
   end
   
   def following?(followed)

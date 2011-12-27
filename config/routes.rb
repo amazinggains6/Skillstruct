@@ -8,6 +8,7 @@ Subscripty::Application.routes.draw do
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
+  match '/dashboard', :to => 'users#dashboard'
   root :to => 'pages#home'
   
   resources :users do

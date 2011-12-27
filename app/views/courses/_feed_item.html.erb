@@ -3,7 +3,7 @@
     <span class="user">
       <%= link_to feed_item.user.firstname, feed_item.user %><%= " posted "%>
     </span>
-    <span class="content"><%= link_to "course", (feed_item) %></span>
+    <span class="content"><%= link_to feed_item.name, (feed_item) %></span>
     <span class="timestamp">
       <%= time_ago_in_words(feed_item.created_at) %> ago.
     </span>

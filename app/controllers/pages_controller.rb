@@ -17,4 +17,14 @@ class PagesController < ApplicationController
   def help
     @title = "Help"
   end
+  
+  def dashboard
+    @title = "Dashboard"
+    if user_signed_in?
+    @feed_items = current_user.feed
+    end
+    @enrollments = current_user.enrollments
+    @courses = current_user.courses
+  end
+  
 end

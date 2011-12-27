@@ -76,6 +76,9 @@ ActiveRecord::Schema.define(:version => 20111221212844) do
     t.text     "bio"
     t.string   "state"
     t.string   "zipcode"
+    t.integer  "earnings"
+    t.integer  "hours_taught"
+    t.integer  "hours_learned"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -1,7 +1,7 @@
 class Course < ActiveRecord::Base
   belongs_to :user
   has_many :enrollments, :dependent => :destroy
-  has_many :users, :through => :enrollments, :source => "user_id", :dependent => :destroy
+  has_many :users, :through => :enrollments, :source => "user_id"
   
   default_scope :order => 'courses.created_at DESC'
   scope :from_users_followed_by, lambda { |user| followed_by(user) }
