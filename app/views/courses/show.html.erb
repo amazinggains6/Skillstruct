@@ -5,3 +5,4 @@
 
 <%= render 'enroll_form' if signed_in? %>
 
+<%= ((@course.endtime - @course.starttime)/3600).to_i %><p> hours</p>
