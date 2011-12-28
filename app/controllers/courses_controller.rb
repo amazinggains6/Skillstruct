@@ -16,9 +16,9 @@ class CoursesController < ApplicationController
   def create
     @course = Course.new(params[:course])
     @course.user_id = current_user.id
+    current_user.teach!(@course, current_user)
     if @course.save
       flash[:notice] = "Course has been created."
-      @course.user.hours_taught = @course.user.hours_taught + 3
       redirect_to @course
     else
       flash[:alert] = "Course has not been created."

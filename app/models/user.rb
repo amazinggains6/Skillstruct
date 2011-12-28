@@ -24,16 +24,19 @@ class User < ActiveRecord::Base
     user.save
   end
   
-  def learn!(course)
-    user.hours_learned = course.attendance
-  end
-  
   def enrolled?(course)
     enrollments.find_by_course_id(course)
   end
   
   def unenroll!(course)
     enrollments.find_by_course_id(course).destroy
+    self.hours_learned = self.hours_learned - ((course.endtime - course.starttime)/3600).to_i
+    self.save
+  end
+  
+  def teach!(course, user)
+    user.hours_taught = user.hours_taught + ((course.endtime - course.starttime)/3600).to_i
+    user.save
   end
   
   def following?(followed)

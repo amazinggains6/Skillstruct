@@ -8,7 +8,8 @@ class Course < ActiveRecord::Base
   
   validates :name, :presence => true
   validates :description, :presence => true
-  validates :zipcode, :presence => true, :length => { :maximum => 5 }
+  validates :zipcode, :presence => true, :length => { :minimum => 5, :maximum => 5 }
+  
   
   private
   
