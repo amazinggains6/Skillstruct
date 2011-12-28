@@ -71,12 +71,36 @@ module ApplicationHelper
     
     def categories_list
       [
-        ['Cooking'],
-        ['Sports'],
-        ['Music'],
-        ['Tutoring'],
+        ['Anthropology'],
+        ['Art'],
+        ['Business'],
+        ['Culture'],
         ['Design'],
-        ['Programming']
+        ['Education'],
+        ['Engineering'],
+        ['Environmental Studies'],
+        ['Food'],
+        ['Gender Studies'],
+        ['Geography'],
+        ['History'],
+        ['Humanities'],
+        ['Journalism'],
+        ['Language'],
+        ['Literature'],
+        ['Logic'],
+        ['Mathematics'],
+        ['Music'],
+        ['Other'],
+        ['Performing Arts'],
+        ['Philosophy'],
+        ['Politics'],
+        ['Programming'],
+        ['Psychology'],
+        ['Religion'],
+        ['Science'],
+        ['Sociology'],
+        ['Sports'],
+        ['Tutoring']
       ]
     end
 end

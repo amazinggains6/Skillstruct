@@ -2,9 +2,11 @@ class EnrollmentsController < ApplicationController
   
   def create
     @course = Course.find(params[:enrollment][:course_id])
+    @enrollments = @course.enrollments.count  
     current_user.enroll!(@course, current_user)
     flash[:notice] = "Congratulations, your enrollment is complete."
     redirect_to @course
+    
   end
   
   def destroy
