@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(:version => 20111221212844) do
     t.string   "place"
     t.string   "state"
     t.string   "zipcode"
+    t.string   "city"
     t.string   "category"
     t.text     "description"
     t.text     "credentials"
@@ -76,9 +77,10 @@ ActiveRecord::Schema.define(:version => 20111221212844) do
     t.text     "bio"
     t.string   "state"
     t.string   "zipcode"
-    t.integer  "earnings"
-    t.integer  "hours_taught"
-    t.integer  "hours_learned"
+    t.string   "city"
+    t.integer  "earnings",                              :default => 0
+    t.integer  "hours_taught",                          :default => 0
+    t.integer  "hours_learned",                         :default => 0
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

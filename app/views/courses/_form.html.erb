@@ -7,12 +7,13 @@
 	<%= f.input :cost %>
 	<%= f.input :place %>
 	<%= f.input :startdate %>
-	<%= f.input :starttime%>
+	<%= f.input :starttime, :ampm => true %>
 	<%= f.input :enddate %>
-	<%= f.input :endtime%>
+	<%= f.input :endtime, :ampm => true %>
 	<%= f.input :attendance %>
 	<%= f.input :state, :collection => (us_states)%>
 	<%= f.input :zipcode %>
+	<%= f.input :city %>
 	<%= f.button :submit %>
 	
 <% end %>

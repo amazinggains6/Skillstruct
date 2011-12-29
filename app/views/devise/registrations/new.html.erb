@@ -7,8 +7,8 @@
 	<%= f.input :email %>
 	<%= f.input :password %>
 	<%= f.input :password_confirmation %>
-	<%= f.input :bio %>
 	<%= f.input :state, :collection => (us_states), :prompt => "Select your state"%>
+	<%= f.input :city %>
 	<%= f.input :zipcode %>
 	<%= f.button :submit %>
 <% end %>
