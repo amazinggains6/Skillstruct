@@ -41046,3 +41046,618 @@ Rendered layouts/_stylesheets.html.erb (1.6ms)
 Rendered layouts/_header.html.erb (2.9ms)
 Rendered layouts/_footer.html.erb (0.6ms)
 Completed 200 OK in 189ms (Views: 66.5ms | ActiveRecord: 62.4ms)
+  [1m[36m (6.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to DeviseCreateUsers (20111123032703)
+Migrating to AddConfirmableFieldsToUsers (20111123033118)
+Migrating to CreateCourses (20111220041441)
+Migrating to AddNameToUsers (20111220184836)
+Migrating to CreateEnrollments (20111220231831)
+Migrating to CreateRelationships (20111221212844)
+Migrating to AddImageToCourses (20111229065429)
+  [1m[35m (177.7ms)[0m  ALTER TABLE `courses` ADD `image` varchar(255)
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20111229065429')[0m
+  [1m[35m (0.4ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2011-12-29 00:59:49 -0600
+  Processing by CoursesController#new as HTML
+ERROR: compiling _app_views_courses__form_html_erb__2506336337323722368_2189503720 RAISED /Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:1: syntax error, unexpected tASSOC, expecting keyword_end
+...ple_form_for(@course), :html => {:multipart => true} do |f| ...
+...                               ^
+/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...html => {:multipart => true} do |f| @output_buffer.safe_conc...
+...                               ^
+/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:24: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_courses__form_html_erb__2506336337323722368_2189503720(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "courses/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for(@course), :html => {:multipart => true} do |f| @output_buffer.safe_concat('
+');@output_buffer.append= ( f.error_messages );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :description);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :category, :collection => (categories_list));@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :credentials );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :cost );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :place );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :startdate );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :starttime, :ampm => true );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :enddate );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :endtime, :ampm => true );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :image );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :attendance );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :state, :collection => (us_states));@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :zipcode );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :city );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.button :submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	
+'); end 
+@output_buffer.safe_concat('	
+	
+	');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:282:in `module_eval'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:282:in `compile'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:190:in `compile!'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:143:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:256:in `render_partial'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:228:in `block (2 levels) in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:227:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:219:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/zsherm/Desktop/base/app/views/courses/new.html.erb:2:in `_app_views_courses_new_html_erb__2241227951853114546_2191136980'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:144:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/zsherm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:416:in `_run__801987779510895751__process_action__1882434843092460027__callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:121:in `process'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal.rb:236:in `block in action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/warden-1.0.6/lib/warden/manager.rb:35:in `block in call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/warden-1.0.6/lib/warden/manager.rb:34:in `catch'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/warden-1.0.6/lib/warden/manager.rb:34:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activerecord-3.1.1/lib/active_record/query_cache.rb:62:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activerecord-3.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/railties-3.1.1/lib/rails/rack/logger.rb:13:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/railties-3.1.1/lib/rails/engine.rb:456:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/railties-3.1.1/lib/rails/rack/content_length.rb:16:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/railties-3.1.1/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/zsherm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/zsherm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/zsherm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered courses/_form.html.erb (23.0ms)
+Rendered courses/new.html.erb within layouts/application (66.1ms)
+Completed 500 Internal Server Error in 179ms
+
+ActionView::Template::Error (/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:1: syntax error, unexpected tASSOC, expecting keyword_end
+...ple_form_for(@course), :html => {:multipart => true} do |f| ...
+...                               ^
+/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...html => {:multipart => true} do |f| @output_buffer.safe_conc...
+...                               ^
+/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:24: syntax error, unexpected keyword_ensure, expecting $end):
+    1: <%= simple_form_for(@course), :html => {:multipart => true} do |f| %>
+    2: <%= f.error_messages %>
+    3: 	<%= f.input :name %>
+    4: 	<%= f.input :description%>
+  app/views/courses/new.html.erb:2:in `_app_views_courses_new_html_erb__2241227951853114546_2191136980'
+
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.1ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2011-12-29 01:00:30 -0600
+  Processing by CoursesController#new as HTML
+ERROR: compiling _app_views_courses__form_html_erb__2506336337323722368_2180537980 RAISED /Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:1: syntax error, unexpected tASSOC, expecting keyword_end
+...ple_form_for(@course), :html => {:multipart => true} do |f| ...
+...                               ^
+/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...html => {:multipart => true} do |f| @output_buffer.safe_conc...
+...                               ^
+/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:24: syntax error, unexpected keyword_ensure, expecting $end
+Function body:           def _app_views_courses__form_html_erb__2506336337323722368_2180537980(local_assigns, output_buffer)
+            _old_virtual_path, @virtual_path = @virtual_path, "courses/_form";_old_output_buffer = @output_buffer;form = local_assigns[:form];;@output_buffer = output_buffer || ActionView::OutputBuffer.new;@output_buffer.append=  simple_form_for(@course), :html => {:multipart => true} do |f| @output_buffer.safe_concat('
+');@output_buffer.append= ( f.error_messages );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :name );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :description);@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :category, :collection => (categories_list));@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :credentials );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :cost );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :place );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :startdate );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :starttime, :ampm => true );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :enddate );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :endtime, :ampm => true );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.file_format :photo, :label => 'Your course image' );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :attendance );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :state, :collection => (us_states));@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :zipcode );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.input :city );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	');@output_buffer.append= ( f.button :submit );@output_buffer.safe_concat('
+');@output_buffer.safe_concat('	
+'); end 
+@output_buffer.safe_concat('	
+	
+	');@output_buffer.to_s
+          ensure
+            @virtual_path, @output_buffer = _old_virtual_path, _old_output_buffer
+          end
+Backtrace: /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:282:in `module_eval'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:282:in `compile'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:190:in `compile!'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:143:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:256:in `render_partial'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:228:in `block (2 levels) in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:227:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/partial_renderer.rb:219:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:41:in `render_partial'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/helpers/rendering_helper.rb:27:in `render'
+/Users/zsherm/Desktop/base/app/views/courses/new.html.erb:2:in `_app_views_courses_new_html_erb__2241227951853114546_2191136980'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:144:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:55:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/template.rb:142:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:40:in `block (2 levels) in render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:33:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:39:in `block in render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:47:in `render_with_layout'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:38:in `render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:12:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/abstract_renderer.rb:22:in `wrap_formats'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/template_renderer.rb:9:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:36:in `render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_view/renderer/renderer.rb:17:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:120:in `_render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/streaming.rb:250:in `_render_template'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:114:in `render_to_body'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/renderers.rb:30:in `render_to_body'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/compatibility.rb:43:in `render_to_body'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:99:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:16:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `block (2 levels) in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `block in ms'
+/Users/zsherm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/benchmark.rb:310:in `realtime'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/core_ext/benchmark.rb:5:in `ms'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:40:in `block in render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:78:in `cleanup_view_runtime'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:24:in `cleanup_view_runtime'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:39:in `render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:167:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/rendering.rb:10:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:416:in `_run__801987779510895751__process_action__1882434843092460027__callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/callbacks.rb:17:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/rescue.rb:17:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `block in instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/notifications.rb:53:in `instrument'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activerecord-3.1.1/lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/base.rb:121:in `process'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/abstract_controller/rendering.rb:45:in `process'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal.rb:193:in `dispatch'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_controller/metal.rb:236:in `block in action'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:65:in `dispatch'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:29:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:152:in `block in call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:96:in `block in recognize'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:82:in `optimized_each'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/code_generation.rb:95:in `recognize'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-mount-0.8.3/lib/rack/mount/route_set.rb:141:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/routing/route_set.rb:532:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/warden-1.0.6/lib/warden/manager.rb:35:in `block in call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/warden-1.0.6/lib/warden/manager.rb:34:in `catch'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/warden-1.0.6/lib/warden/manager.rb:34:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/etag.rb:23:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/conditionalget.rb:25:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/head.rb:14:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/flash.rb:243:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:195:in `context'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/session/abstract/id.rb:190:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/cookies.rb:331:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activerecord-3.1.1/lib/active_record/query_cache.rb:62:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activerecord-3.1.1/lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/callbacks.rb:81:in `run_callbacks'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/reloader.rb:68:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/sendfile.rb:101:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/railties-3.1.1/lib/rails/rack/logger.rb:13:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/methodoverride.rb:24:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/runtime.rb:17:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/activesupport-3.1.1/lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/lock.rb:15:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/static.rb:53:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/railties-3.1.1/lib/rails/engine.rb:456:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/railties-3.1.1/lib/rails/rack/content_length.rb:16:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/railties-3.1.1/lib/rails/rack/log_tailer.rb:14:in `call'
+/Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/rack-1.3.5/lib/rack/handler/webrick.rb:59:in `service'
+/Users/zsherm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:111:in `service'
+/Users/zsherm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/httpserver.rb:70:in `run'
+/Users/zsherm/.rvm/rubies/ruby-1.9.2-p290/lib/ruby/1.9.1/webrick/server.rb:183:in `block in start_thread'
+Rendered courses/_form.html.erb (1.2ms)
+Rendered courses/new.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error (/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:1: syntax error, unexpected tASSOC, expecting keyword_end
+...ple_form_for(@course), :html => {:multipart => true} do |f| ...
+...                               ^
+/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:1: syntax error, unexpected keyword_do_block, expecting keyword_end
+...html => {:multipart => true} do |f| @output_buffer.safe_conc...
+...                               ^
+/Users/zsherm/Desktop/base/app/views/courses/_form.html.erb:24: syntax error, unexpected keyword_ensure, expecting $end):
+    1: <%= simple_form_for(@course), :html => {:multipart => true} do |f| %>
+    2: <%= f.error_messages %>
+    3: 	<%= f.input :name %>
+    4: 	<%= f.input :description%>
+  app/views/courses/new.html.erb:2:in `_app_views_courses_new_html_erb__2241227951853114546_2191136980'
+
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (3.8ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2011-12-29 01:01:04 -0600
+  Processing by CoursesController#new as HTML
+Rendered courses/_form.html.erb (736.9ms)
+Rendered courses/new.html.erb within layouts/application (737.6ms)
+Completed 500 Internal Server Error in 743ms
+
+ActionView::Template::Error (undefined method `file_format' for #<SimpleForm::FormBuilder:0x00000103ba5d98>):
+    10: 	<%= f.input :starttime, :ampm => true %>
+    11: 	<%= f.input :enddate %>
+    12: 	<%= f.input :endtime, :ampm => true %>
+    13: 	<%= f.file_format :photo, :label => 'Your course image' %>
+    14: 	<%= f.input :attendance %>
+    15: 	<%= f.input :state, :collection => (us_states)%>
+    16: 	<%= f.input :zipcode %>
+  app/views/courses/_form.html.erb:13:in `block in _app_views_courses__form_html_erb__2506336337323722368_2165094700'
+  app/views/courses/_form.html.erb:1:in `_app_views_courses__form_html_erb__2506336337323722368_2165094700'
+  app/views/courses/new.html.erb:2:in `_app_views_courses_new_html_erb__2241227951853114546_2191136980'
+
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.0ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.0ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2011-12-29 01:01:39 -0600
+  Processing by CoursesController#new as HTML
+Rendered courses/_form.html.erb (131.9ms)
+Rendered courses/new.html.erb within layouts/application (132.5ms)
+Rendered layouts/_stylesheets.html.erb (90.9ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered layouts/_header.html.erb (196.3ms)
+Rendered layouts/_footer.html.erb (1.7ms)
+Completed 200 OK in 837ms (Views: 781.9ms | ActiveRecord: 54.1ms)
+
+
+Started GET "/courses/new" for 127.0.0.1 at 2011-12-29 01:03:21 -0600
+  Processing by CoursesController#new as HTML
+Rendered courses/_form.html.erb (149.1ms)
+Rendered courses/new.html.erb within layouts/application (149.7ms)
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (73.5ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 317ms (Views: 269.8ms | ActiveRecord: 46.1ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2011-12-29 01:04:11 -0600
+  Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gjTDVgy8kQ+vZl1yRMKKiPCuJyfEPHMcExOA/oXA8cc=", "course"=>{"name"=>"dsafadf", "description"=>"adsfafsda", "category"=>"Engineering", "credentials"=>"asdfdfa", "cost"=>"3", "place"=>"adsfasd", "startdate(1i)"=>"2011", "startdate(2i)"=>"12", "startdate(3i)"=>"29", "starttime(1i)"=>"2011", "starttime(2i)"=>"12", "starttime(3i)"=>"29", "starttime(4i)"=>"07", "starttime(5i)"=>"03", "enddate(1i)"=>"2011", "enddate(2i)"=>"12", "enddate(3i)"=>"29", "endtime(1i)"=>"2011", "endtime(2i)"=>"12", "endtime(3i)"=>"29", "endtime(4i)"=>"08", "endtime(5i)"=>"03", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001021fd0a8 @original_filename="railslion.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"course[image]\"; filename=\"railslion.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/var/folders/eU/eUzk4IltECetWn3tM92G3++++TI/-Tmp-/RackMultipart20111229-6012-wiuknp>>, "attendance"=>"3", "state"=>"AZ", "zipcode"=>"22222", "city"=>"Nashville"}, "commit"=>"Create Course"}
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.4ms)[0m  [1mUPDATE `users` SET `hours_taught` = 3, `updated_at` = '2011-12-29 07:04:12' WHERE `users`.`id` = 1[0m
+  [1m[35m (26.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO `courses` (`attendance`, `category`, `city`, `cost`, `created_at`, `credentials`, `description`, `enddate`, `endtime`, `image`, `name`, `place`, `startdate`, `starttime`, `state`, `updated_at`, `user_id`, `zipcode`) VALUES (3, 'Engineering', 'Nashville', 3, '2011-12-29 07:04:12', 'asdfdfa', 'adsfafsda', '2011-12-29', '2011-12-29 08:03:00', 'railslion.png', 'dsafadf', 'adsfasd', '2011-12-29', '2011-12-29 07:03:00', 'AZ', '2011-12-29 07:04:12', 1, '22222')
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/courses/4
+Completed 302 Found in 271ms
+
+
+Started GET "/courses/4" for 127.0.0.1 at 2011-12-29 01:04:12 -0600
+  Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mCourse Load (0.4ms)[0m  SELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 4 ORDER BY courses.created_at DESC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered courses/_enroll_form.html.erb (0.6ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `enrollments` WHERE `enrollments`.`course_id` = 4[0m
+Rendered courses/show.html.erb within layouts/application (315.9ms)
+Completed 500 Internal Server Error in 522ms
+
+ActionView::Template::Error (undefined local variable or method `painting' for #<#<Class:0x00000103920aa0>:0x0000010391c068>):
+    10: 
+    11: <%= @course.enrollments.count %>
+    12: 
+    13: <%= image_tag painting.image_url.to_s %>
+  app/views/courses/show.html.erb:13:in `_app_views_courses_show_html_erb__2402419390550879653_2177422780'
+
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (6.4ms)
+
+
+Started POST "/courses" for 127.0.0.1 at 2011-12-29 01:05:15 -0600
+  Processing by CoursesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gjTDVgy8kQ+vZl1yRMKKiPCuJyfEPHMcExOA/oXA8cc=", "course"=>{"name"=>"dsafadf", "description"=>"adsfafsda", "category"=>"Engineering", "credentials"=>"asdfdfa", "cost"=>"3", "place"=>"adsfasd", "startdate(1i)"=>"2011", "startdate(2i)"=>"12", "startdate(3i)"=>"29", "starttime(1i)"=>"2011", "starttime(2i)"=>"12", "starttime(3i)"=>"29", "starttime(4i)"=>"07", "starttime(5i)"=>"03", "enddate(1i)"=>"2011", "enddate(2i)"=>"12", "enddate(3i)"=>"29", "endtime(1i)"=>"2011", "endtime(2i)"=>"12", "endtime(3i)"=>"29", "endtime(4i)"=>"08", "endtime(5i)"=>"03", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001021ff178 @original_filename="railslion.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"course[image]\"; filename=\"railslion.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/var/folders/eU/eUzk4IltECetWn3tM92G3++++TI/-Tmp-/RackMultipart20111229-6012-mqsteg>>, "attendance"=>"3", "state"=>"AZ", "zipcode"=>"22222", "city"=>"Nashville"}, "commit"=>"Create Course"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.5ms)[0m  UPDATE `users` SET `hours_taught` = 4, `updated_at` = '2011-12-29 07:05:15' WHERE `users`.`id` = 1
+  [1m[36m (27.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO `courses` (`attendance`, `category`, `city`, `cost`, `created_at`, `credentials`, `description`, `enddate`, `endtime`, `image`, `name`, `place`, `startdate`, `starttime`, `state`, `updated_at`, `user_id`, `zipcode`) VALUES (3, 'Engineering', 'Nashville', 3, '2011-12-29 07:05:15', 'asdfdfa', 'adsfafsda', '2011-12-29', '2011-12-29 08:03:00', 'railslion.png', 'dsafadf', 'adsfasd', '2011-12-29', '2011-12-29 07:03:00', 'AZ', '2011-12-29 07:05:15', 1, '22222')[0m
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/courses/5
+Completed 302 Found in 207ms
+
+
+Started GET "/courses/5" for 127.0.0.1 at 2011-12-29 01:05:15 -0600
+  Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered courses/_enroll_form.html.erb (0.1ms)
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `enrollments` WHERE `enrollments`.`course_id` = 5
+Rendered courses/show.html.erb within layouts/application (344.9ms)
+Completed 500 Internal Server Error in 481ms
+
+ActionView::Template::Error (undefined local variable or method `image_url' for #<#<Class:0x0000010304a3b8>:0x00000103007bf8>):
+    10: 
+    11: <%= @course.enrollments.count %>
+    12: 
+    13: <%= image_tag image_url.to_s %>
+  app/views/courses/show.html.erb:13:in `_app_views_courses_show_html_erb__2402419390550879653_2165341780'
+
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (5.6ms)
+
+
+Started GET "/courses/5" for 127.0.0.1 at 2011-12-29 01:06:08 -0600
+  Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered courses/_enroll_form.html.erb (0.1ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `enrollments` WHERE `enrollments`.`course_id` = 5
+Rendered courses/show.html.erb within layouts/application (38.3ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (40.6ms)
+Rendered layouts/_footer.html.erb (0.7ms)
+Completed 200 OK in 201ms (Views: 79.7ms | ActiveRecord: 42.5ms)
+
+
+Started GET "/courses/5" for 127.0.0.1 at 2011-12-29 01:06:35 -0600
+  Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCourse Load (0.4ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered courses/_enroll_form.html.erb (0.1ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `enrollments` WHERE `enrollments`.`course_id` = 5
+Rendered courses/show.html.erb within layouts/application (130.2ms)
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 261ms (Views: 41.3ms | ActiveRecord: 136.9ms)
+
+
+Started GET "/courses/5/edit" for 127.0.0.1 at 2011-12-29 01:07:15 -0600
+  Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCourse Load (0.6ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+Rendered courses/_form.html.erb (96.0ms)
+Rendered courses/edit.html.erb within layouts/application (97.1ms)
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+  [1m[35mUser Load (0.6ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (109.9ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 264ms (Views: 205.7ms | ActiveRecord: 56.0ms)
+
+
+Started GET "/courses/5/" for 127.0.0.1 at 2011-12-29 01:07:43 -0600
+  Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered courses/_enroll_form.html.erb (0.1ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `enrollments` WHERE `enrollments`.`course_id` = 5
+Rendered courses/show.html.erb within layouts/application (37.4ms)
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+Rendered layouts/_header.html.erb (2.8ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 173ms (Views: 41.4ms | ActiveRecord: 48.7ms)
+
+
+Started GET "/courses/5/edit" for 127.0.0.1 at 2011-12-29 01:12:45 -0600
+
+LoadError (no such file to load -- RMagick):
+  app/uploaders/image_uploader.rb:6:in `<class:ImageUploader>'
+  app/uploaders/image_uploader.rb:3:in `<top (required)>'
+  app/models/course.rb:5:in `<class:Course>'
+  app/models/course.rb:1:in `<top (required)>'
+  app/controllers/courses_controller.rb:1:in `<top (required)>'
+
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.0ms)
+
+
+Started GET "/courses/5/" for 127.0.0.1 at 2011-12-29 01:14:49 -0600
+  Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCourse Load (0.6ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+Rendered courses/_enroll_form.html.erb (0.7ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `enrollments` WHERE `enrollments`.`course_id` = 5
+Rendered courses/show.html.erb within layouts/application (185.0ms)
+Rendered layouts/_stylesheets.html.erb (101.5ms)
+Rendered layouts/_header.html.erb (4.5ms)
+Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 799ms (Views: 627.0ms | ActiveRecord: 60.1ms)
+
+
+Started GET "/uploads/course/image/5/thumb_railslion.png" for 127.0.0.1 at 2011-12-29 01:14:51 -0600
+
+ActionController::RoutingError (No route matches [GET] "/uploads/course/image/5/thumb_railslion.png"):
+  
+
+Rendered /Users/zsherm/.rvm/gems/ruby-1.9.2-p290@baseappdevise/gems/actionpack-3.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.6ms)
+
+
+Started GET "/courses/5/edit" for 127.0.0.1 at 2011-12-29 01:15:00 -0600
+  Processing by CoursesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mCourse Load (0.7ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+Rendered courses/_form.html.erb (346.1ms)
+Rendered courses/edit.html.erb within layouts/application (347.2ms)
+Rendered layouts/_stylesheets.html.erb (1.6ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered layouts/_header.html.erb (99.3ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 525ms (Views: 465.1ms | ActiveRecord: 57.3ms)
+
+
+Started PUT "/courses/5" for 127.0.0.1 at 2011-12-29 01:15:08 -0600
+  Processing by CoursesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gjTDVgy8kQ+vZl1yRMKKiPCuJyfEPHMcExOA/oXA8cc=", "course"=>{"name"=>"dsafadf", "description"=>"adsfafsda", "category"=>"Engineering", "credentials"=>"asdfdfa", "cost"=>"3", "place"=>"adsfasd", "startdate(1i)"=>"2011", "startdate(2i)"=>"12", "startdate(3i)"=>"29", "starttime(1i)"=>"2000", "starttime(2i)"=>"1", "starttime(3i)"=>"1", "starttime(4i)"=>"07", "starttime(5i)"=>"03", "enddate(1i)"=>"2011", "enddate(2i)"=>"12", "enddate(3i)"=>"29", "endtime(1i)"=>"2000", "endtime(2i)"=>"1", "endtime(3i)"=>"1", "endtime(4i)"=>"08", "endtime(5i)"=>"03", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001016c83b8 @original_filename="railslion.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"course[image]\"; filename=\"railslion.png\"\r\nContent-Type: image/png\r\n", @tempfile=#<File:/var/folders/eU/eUzk4IltECetWn3tM92G3++++TI/-Tmp-/RackMultipart20111229-6834-1x2kp3f>>, "attendance"=>"3", "state"=>"AZ", "zipcode"=>"22222", "city"=>"Nashville"}, "commit"=>"Update Course", "id"=>"5"}
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mCourse Load (0.5ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  UPDATE `courses` SET `image` = 'railslion.png', `updated_at` = '2011-12-29 07:15:08' WHERE `courses`.`id` = 5
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/courses/5
+Completed 302 Found in 251ms
+
+
+Started GET "/courses/5" for 127.0.0.1 at 2011-12-29 01:15:08 -0600
+  Processing by CoursesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mCourse Load (0.5ms)[0m  SELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 5 ORDER BY courses.created_at DESC LIMIT 1
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered courses/_enroll_form.html.erb (0.1ms)
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `enrollments` WHERE `enrollments`.`course_id` = 5[0m
+Rendered courses/show.html.erb within layouts/application (36.9ms)
+Rendered layouts/_stylesheets.html.erb (1.5ms)
+Rendered layouts/_header.html.erb (2.9ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 165ms (Views: 40.9ms | ActiveRecord: 41.6ms)

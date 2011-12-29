@@ -1,4 +1,4 @@
-<%= simple_form_for(@course) do |f| %>
+<%= simple_form_for @course, :html => {:multipart => true} do |f| %>
 <%= f.error_messages %>
 	<%= f.input :name %>
 	<%= f.input :description%>
@@ -10,6 +10,7 @@
 	<%= f.input :starttime, :ampm => true %>
 	<%= f.input :enddate %>
 	<%= f.input :endtime, :ampm => true %>
+	<%= f.file_field :image, :label => 'Your course image' %>
 	<%= f.input :attendance %>
 	<%= f.input :state, :collection => (us_states)%>
 	<%= f.input :zipcode %>

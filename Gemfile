@@ -7,7 +7,8 @@ gem 'rails', '3.1.1'
 
 gem 'mysql2'
 gem "simple_form"
-
+gem "rmagick"
+gem "carrierwave"
 
 # Gems used only for assets and not required
 # in production environments by default.

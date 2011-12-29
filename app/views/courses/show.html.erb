@@ -9,3 +9,5 @@
 <%= ((@course.endtime - @course.starttime)/3600).to_i %><p> hours</p>
 
 <%= @course.enrollments.count %>
+
+<%= image_tag @course.image_url(:thumb).to_s %>
