@@ -22,3 +22,4 @@ class Course < ActiveRecord::Base
                 { :user_id => user })
     end
 end
+

@@ -1,7 +1,11 @@
 class CoursesController < ApplicationController
   
   def index
-    @courses = Course.all
+    if current_user.state?
+      @courses = Course.where(:state => current_user.state)
+    else
+      @courses = Course.all
+    end
   end
   
   def show
