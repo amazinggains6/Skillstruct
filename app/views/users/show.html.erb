@@ -1,5 +1,6 @@
 <h2><%= @user.firstname + ' ' + @user.lastname %></h2>
 <h2><%= @user.state %></h2>
+<%= image_tag @user.image_url.to_s %>
 <%= render 'stats' %>
 <%= render 'follow_form' if signed_in? %>
 <% @enrollments = current_user.enrollments %>
