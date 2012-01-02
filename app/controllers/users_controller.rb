@@ -5,6 +5,7 @@ class UsersController < ApplicationController
   def show
     @title = @user.id
     @enrollments = @user.enrollments
+    @courses = Course.find(:all, :conditions => [ "user_id IN (?)", current_user.id], :limit => 50)
   end
   
   def find_user

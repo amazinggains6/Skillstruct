@@ -2,15 +2,26 @@
 	<span id = "avatar"><%= image_tag @user.image_url.to_s %></span>
 	<h3><%= @user.firstname + ' ' + @user.lastname %></h3>
 	<h4><%= @user.city + ", " + @user.state %></h4>
-	<br><%= render 'stats' %></br>
-	<%= render 'follow_form' if signed_in? %>
-	<%= link_to "Settings", edit_user_registration_path if signed_in? %>
+		<div id = "left-stats">
+		<%= render 'stats' %>
+		<%= render 'follow_form' if signed_in? %>
+		</div>
+	<%= link_to "Settings", edit_user_registration_path, :id => "settings", :class => "button1" if signed_in? && @user == current_user %>
+	<br></br>
 	<p>Hours Taught: <%=@user.hours_taught %></p>
 	<p>Hours Learned: <%=@user.hours_learned %></p>
 </div>
+
 <div id = "profile_right">
-	<% @enrollments = current_user.enrollments %>
+	<p>Taking:</p>
 	<% @enrollments.each do |enrollment| %>
-		<li><%= enrollment.course.name %>, <%= enrollment.active %></li>
+		<li><%= link_to enrollment.course.name, enrollment.course %></li>
+	<% end %>
+</div>
+
+<div id ="profile_bottom_right">
+	<p>Teaching:</p>
+	<% @courses.each do |course| %>
+		<li><%= link_to course.name, course %></li>
 	<% end %>
 </div>

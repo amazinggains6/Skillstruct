@@ -95,17 +95,17 @@ section h1 {
 /* Links */
 
 a {
-  color: #09c;
+  color: #383838;
   text-decoration: none;
 }
 
 a:hover {
-  color: #069;
-  text-decoration: underline;
+  color: #383838;;
+  text-decoration: none;
 }
 
 a:visited {
-  color: #069;
+  color: #383838;
 }
 
 /* Navigation */
@@ -323,9 +323,19 @@ ul.users {
 	line-height: 15px;	
 }
 
+#profile_top_left a {
+	text-decoration: none;
+	color: white;
+}
+
 .stats {
 	margin: 0 auto;
-	padding-left: 20px;
+	margin-top: 10px;
+	padding-left: 30px;
+}
+
+.stats:hover {
+	text-decoration: underline;
 }
 
 #profile_right {
@@ -345,3 +355,56 @@ ul.users {
 	line-height: 15px;	
 }
 
+#profile_bottom_right {
+	width: 65%;
+	padding: 1em;
+	background: white;
+	vertical-align: top;
+	color: #383838;
+	-moz-border-radius:    5px;
+	-webkit-border-radius: 5px;
+	border-radius:         5px;
+	float: right;
+	margin-top: 10px;
+	
+}
+
+#profile_bottom_right h2, h3, h4, p {
+	color: #383838;
+	line-height: 15px;	
+}
+
+
+.button1 {
+	background: #e34747;
+	background: rgba(227, 71, 71, 1);
+	padding: 10px 50px 10px 50px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	border: 1px solid #d4d4cd;
+	text-align: center;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
+
+.button1:hover {
+	color: white;
+	background: #4D4748;
+	background: rgba(77, 71, 72, 1);	
+}
+
+.button1 a {
+	color: red;
+}
+
+#settings {
+	float: center;
+}
+
+#left-stats a {
+	color: #4D4748;
+	text-decoration: underline;
+}
