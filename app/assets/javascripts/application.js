@@ -7,3 +7,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(function() {
+	$("#course_startdate").datepicker();
+});
+
+$(function() {
+	$("#course_enddate").datepicker();
+});

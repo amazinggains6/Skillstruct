@@ -6,9 +6,11 @@
 	<%= f.input :credentials %>
 	<%= f.input :cost %>
 	<%= f.input :place %>
-	<%= f.input :startdate %>
+	<%= f.label :startdate %>
+	<%= f.text_field :startdate %>
 	<%= f.input :starttime, :ampm => true %>
-	<%= f.input :enddate %>
+	<%= f.label :enddate %>
+	<%= f.text_field :enddate %>
 	<%= f.input :endtime, :ampm => true %>
 	<%= f.file_field :image, :label => 'Your course image' %>
 	<%= f.input :attendance %>
