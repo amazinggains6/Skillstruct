@@ -64183,3 +64183,129 @@ Served asset /rails.png - 304 Not Modified (0ms)
 
 Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-01-02 16:34:20 -0600
 Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2012-01-02 16:43:34 -0600
+  Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1[0m
+  [1m[35mUser Load (0.7ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+  [1m[36mCourse Load (0.9ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE (user_id IN (1)) ORDER BY courses.created_at DESC LIMIT 50[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`followed_id` WHERE `relationships`.`follower_id` = 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `users` INNER JOIN `relationships` ON `users`.`id` = `relationships`.`follower_id` WHERE `relationships`.`followed_id` = 1[0m
+Rendered users/_stats.html.erb (136.3ms)
+Rendered users/_follow_form.html.erb (0.5ms)
+  [1m[35mEnrollment Load (0.5ms)[0m  SELECT `enrollments`.* FROM `enrollments` WHERE `enrollments`.`user_id` = 1
+  [1m[36mCourse Load (0.9ms)[0m  [1mSELECT `courses`.* FROM `courses` WHERE `courses`.`id` = 2 ORDER BY courses.created_at DESC LIMIT 1[0m
+Rendered users/show.html.erb within layouts/application (305.0ms)
+Compiled custom.css  (0ms)  (pid 48763)
+Rendered layouts/_stylesheets.html.erb (23.7ms)
+Rendered layouts/_header.html.erb (3.9ms)
+Rendered layouts/_footer.html.erb (0.9ms)
+Completed 200 OK in 663ms (Views: 393.8ms | ActiveRecord: 99.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /custom.css - 200 OK (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /courses.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /pages.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/enrollments.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /enrollments.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /users.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /relationships.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-01-02 16:43:35 -0600
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2012-01-02 16:43:36 -0600
+  Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT `users`.* FROM `users` WHERE `users`.`id` = 1 LIMIT 1
+Rendered devise/registrations/edit.html.erb within layouts/application (402.1ms)
+Rendered layouts/_stylesheets.html.erb (2.0ms)
+Rendered layouts/_header.html.erb (3.0ms)
+Rendered layouts/_footer.html.erb (0.6ms)
+Completed 200 OK in 544ms (Views: 419.2ms | ActiveRecord: 21.6ms)
+
+
+Started GET "/assets/courses.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /courses.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/custom.css?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /custom.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/enrollments.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /enrollments.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/screen.css?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /blueprint/screen.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /pages.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/relationships.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /relationships.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /users.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/blueprint/print.css?body=1" for 127.0.0.1 at 2012-01-02 16:43:37 -0600
+Served asset /blueprint/print.css - 304 Not Modified (0ms)
