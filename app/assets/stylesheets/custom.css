@@ -624,7 +624,8 @@ input, textarea {
 	-webkit-border-radius: 5px;
 	border-radius:         5px;
 	float: left;
-	margin-top: 10px;
+	overflow: auto;
+	margin-top: 5px;
 	margin-right: 5px;
 	-webkit-box-shadow: 0px 1px 2px #ccc;
 	-moz-box-shadow: 0px 1px 2px #ccc;
@@ -633,7 +634,7 @@ input, textarea {
 
 #course_left_image {
 	float: left;
-	height: 190px;
+	height: 100px;
 	width: 190px;
 	border: solid 1px #E5E5E5;
 }
@@ -641,7 +642,7 @@ input, textarea {
 #course_left_title {
 	float: right;
 	width: 60%;
-	height: 190px;
+	height: 100px;
 	text-align: center;
 	border: solid 1px #E5E5E5;
 }
@@ -657,7 +658,84 @@ input, textarea {
 	float: left;
 	border: solid 1px #E5E5E5;
 }
+
 #about_course {
 	border-bottom: solid 1px #E5E5E5;
 }
 
+#course_top_right {
+	width: 38%;
+	padding: 1em;
+	background: white;
+	vertical-align: top;
+	color: #383838;
+	-moz-border-radius:    5px;
+	-webkit-border-radius: 5px;
+	border-radius:         5px;
+	float: right;
+	margin-top: 5px;
+	margin-right: 5px;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
+}
+
+#course_info {
+	float: right;
+	width: 95%;
+	margin-top: 15px;
+}
+
+#course_info ul li {
+	width: 216px;
+	text-transform: uppercase;
+	color: #787871;
+	text-shadow: 1px 1px 1px #fff;
+	position: relative;
+	margin-bottom: 25px;
+	letter-spacing: 1px;
+}
+
+#course_info ul li.bottle {
+	padding-bottom: 8px;
+}
+
+#course_info em {
+	text-transform: lowercase;
+	font-style: italic;
+	letter-spacing: 0;
+}
+
+#course_info span {
+	position: absolute;
+	right: -85px;
+	color: #e34747;
+}
+
+#course_date {
+	width: 95%;
+	margin-left: 20px;
+}
+
+#course_top_right input {
+	-webkit-border-radius: 5px;  
+	-moz-border-radius: 5px;
+	background: #e34747;
+	background: rgba(227, 71, 71, 1);
+	color: white;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	width: 150px;
+}
+
+#course_top_right input:hover {
+	background: #4D4748;
+	background: rgba(77, 71, 72, 1);
+}
+
+#enroll_form {
+	width: 150px;
+	margin: 0 auto;
+}
