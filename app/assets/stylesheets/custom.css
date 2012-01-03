@@ -479,3 +479,30 @@ input, textarea {
 #file {
 	margin-left: 120px;
 }
+
+.course_preview {
+	height: 100px;
+	border-bottom: solid 1px #E5E5E5;
+	border-top: solid 1px #E5E5E5;
+}
+
+.course_preview a {
+	color: #1aabcf;
+}
+
+.course_preview p {
+	font-size: 75%;
+}
+
+.course_image {
+	float: left;
+}
+
+.course_name {
+	margin-left: 150px;
+	margin-top: -58px;
+	font-size: 125%;
+	max-width: 400px;
+}
+
+

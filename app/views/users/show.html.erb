@@ -15,13 +15,19 @@
 <div id = "profile_right">
 	<p>Taking:</p>
 	<% @enrollments.each do |enrollment| %>
-		<li><%= link_to enrollment.course.name, enrollment.course %></li>
+		<div class = "course_preview"><%= link_to enrollment.course.name, enrollment.course %></div>
 	<% end %>
 </div>
 
 <div id ="profile_bottom_right">
-	<p>Teaching:</p>
+	<br><p>Teaching:</p></br>
 	<% @courses.each do |course| %>
-		<li><%= link_to course.name, course %></li>
+		<div class = "course_preview">
+			<div class = "course_thumb"><%= image_tag course.image_url(:thumb).to_s %>
+				<p>Taught by <%= course.user.firstname %></p></div>
+			<div class = "course_name"><%= link_to course.name, course %>
+				<p>Located in <%= course.city + ', ' + course.state %></p>
+				</div>
+		</div>
 	<% end %>
 </div>
