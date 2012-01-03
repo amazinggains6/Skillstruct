@@ -1,5 +1,5 @@
 <div id = "profile_top_left">
-	<span id = "avatar"><%= image_tag @user.image_url.to_s %></span>
+	<span id = "avatar"><%= image_tag @user.image_url(:profile).to_s %></span>
 	<h3><%= @user.firstname + ' ' + @user.lastname %></h3>
 	<h4><%= @user.city + ", " + @user.state %></h4>
 		<div id = "left-stats">
