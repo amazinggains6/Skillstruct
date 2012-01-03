@@ -1,4 +1,5 @@
 module ApplicationHelper
+  
   def title
       base_title = "Subscripty"
       if @title.nil?

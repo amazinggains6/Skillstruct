@@ -1,7 +1,11 @@
 class CoursesController < ApplicationController
-  
+  include ApplicationHelper
+
   def index
-    if current_user.state?
+    state = params[:state]
+    if (params[:state])
+      @courses = Course.where(:state => state)
+    elsif current_user.state?
       @courses = Course.where(:state => current_user.state)
     else
       @courses = Course.all
@@ -51,6 +55,6 @@ class CoursesController < ApplicationController
     flash[:notice] = "Course has been deleted."
     redirect_to courses_path
   end
-  
+ 
   
 end
