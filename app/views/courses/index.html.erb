@@ -1,11 +1,11 @@
 <%= link_to "New Course", new_course_path %>
 
 	<%= form_tag(courses_path, :method => :get) do |f| %>
-		<%= select_tag(:state, options_for_select(us_states)) %>
+		<%= select_tag(:state, options_for_select(us_states, :selected => current_user.state)) %>
 		<%= submit_tag 'Filter by State' %>
 	<% end %>
 
-<h2>Courses</h2>
+<h2>Courses in your state:</h2>
 <ul>
 	<% @courses.each do |course| %>
 	<div class = "course_preview">
