@@ -314,6 +314,21 @@ ul.users {
 	position: relative;
 }
 
+#index_left {
+	padding: 1em;
+	vertical-align: top;
+	margin-top: 10px;
+	background: white;
+	color: #383838;
+	width: 25%;
+	height: 425px;
+	-moz-border-radius:    5px;
+	-webkit-border-radius: 5px;
+	border-radius:         5px;
+	float: left;
+	position: relative;
+}
+
 #avatar {
 	float: center;
 }
@@ -494,13 +509,15 @@ input, textarea {
 	font-size: 75%;
 }
 
-.course_image {
+.course_thumb {
+	margin-top: 15px;
+	margin-left: 15px;
 	float: left;
 }
 
 .course_name {
 	margin-left: 150px;
-	margin-top: -58px;
+	margin-top: 15px;
 	font-size: 125%;
 	max-width: 400px;
 }
