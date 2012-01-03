@@ -15,7 +15,14 @@
 <div id = "profile_right">
 	<p>Taking:</p>
 	<% @enrollments.each do |enrollment| %>
-		<div class = "course_preview"><%= link_to enrollment.course.name, enrollment.course %></div>
+		<div class = "course_preview">
+			<div class = "course_thumb"><%= image_tag enrollment.course.image_url(:thumb).to_s %>
+				<p>Taught by <%= link_to enrollment.course.user.firstname, enrollment.course.user %></p></div>
+			<div class = "course_name"><%= link_to enrollment.course.name, enrollment.course %>
+				<p>Located in <%= enrollment.course.city + ', ' + enrollment.course.state %></p>
+				<p>On <%= enrollment.course.startdate.strftime("%d/%m") %></p>
+				</div>
+		</div>
 	<% end %>
 </div>
 
@@ -24,9 +31,10 @@
 	<% @courses.each do |course| %>
 		<div class = "course_preview">
 			<div class = "course_thumb"><%= image_tag course.image_url(:thumb).to_s %>
-				<p>Taught by <%= course.user.firstname %></p></div>
+				<p>Taught by <%= link_to course.user.firstname, course.user %></p></div>
 			<div class = "course_name"><%= link_to course.name, course %>
 				<p>Located in <%= course.city + ', ' + course.state %></p>
+				<p>On <%= course.startdate.strftime("%d/%m") %></p>
 				</div>
 		</div>
 	<% end %>

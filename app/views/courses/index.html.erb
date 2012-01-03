@@ -2,8 +2,15 @@
 
 <h2>Courses</h2>
 <ul>
-	<% @courses.each do |course| %> 
-		<li><%= link_to course.name, course %></li>
+	<% @courses.each do |course| %>
+	<div class = "course_preview">
+		<div class = "course_thumb"><%= image_tag course.image_url(:thumb).to_s %>
+			<p>Taught by <%= link_to course.user.firstname, course.user %></p></div>
+		<div class = "course_name"><%= link_to course.name, course %>
+			<p>Located in <%= course.city + ', ' + course.state %></p>
+			<p>On <%= course.startdate.strftime("%d/%m") %></p>
+			</div>
+	</div> 
 	<% end %>
 </ul>
 

@@ -505,8 +505,16 @@ input, textarea {
 	max-width: 400px;
 }
 
+.course_name p {
+	font-size: 75%;
+}
+
 .content a{
 	color: #1aabcf;
+}
+
+#profile_bottom_right p {
+	font-size: 75%;
 }
 
 
