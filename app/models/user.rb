@@ -23,7 +23,9 @@ class User < ActiveRecord::Base
   def enroll!(course, user)
     enrollments.create!(:course_id => course.id, :active => true)
     user.hours_learned = user.hours_learned + ((course.endtime - course.starttime)/3600).to_i
+    course.user.earnings += course.cost
     user.save
+    course.user.save
   end
   
   def enrolled?(course)
@@ -33,7 +35,9 @@ class User < ActiveRecord::Base
   def unenroll!(course)
     enrollments.find_by_course_id(course).destroy
     self.hours_learned = self.hours_learned - ((course.endtime - course.starttime)/3600).to_i
+    course.user.earnings = course.user.earnings - course.cost
     self.save
+    course.user.save
   end
   
   def teach!(course, user)
