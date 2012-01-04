@@ -844,3 +844,25 @@ input, textarea {
 #user_remember_me {
 	width: 20px;
 }
+
+footer nav ul li a{
+  padding: 6px 8px 6px 8px;
+  color: #1aabcf;
+  font: 13px "LeagueGothicRegular", Verdana,sans-serif;
+}
+
+footer nav ul li a:visited {
+  color: #1aabcf;
+}
+
+footer nav ul li a:hover {
+	-webkit-border-radius: 5px;  
+	-moz-border-radius: 5px;
+	background: #e34747;
+	background: rgba(227, 71, 71, 1);
+	color: white;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}
