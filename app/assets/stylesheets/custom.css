@@ -73,13 +73,11 @@ display:block;
 
 #footer_wrapper {
 	width: 100%;
-	background: #f5f5f5;
 	margin-top: 20px;
-	height: 300px;
 }
 
 body {
-  background: #8ec1da;
+  background: #f5f5f5;
 }
 
 header {
@@ -94,7 +92,7 @@ header img {
 
 section {
   margin-top: 1em;
-  background: #c0deed;
+  background: #f5f5f5;
   font-size: 120%;
   padding: 20px;
   width: 960px;
@@ -125,7 +123,9 @@ a:visited {
 /* Navigation */
 
 nav {
-  float: right;
+  	margin-top: 20px;
+	float: right;
+	color: white;
 }
 
 nav {
@@ -142,20 +142,36 @@ nav ul {
 nav ul li {
   list-style-type: none;
   display: inline-block;
-  padding: 0.2em 0;
+  font-size: 50%;
 }
 
 nav ul li a {
-  padding: 0 5px;
-  font-weight: bold;
+  padding: 6px 8px 6px 8px;
+  color: white;
+  font: 13px "LeagueGothicRegular", Verdana,sans-serif;
 }
 
 nav ul li a:visited {
-  color: #09c;
+  color: white;
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
+  	-webkit-border-radius: 5px;  
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #1aabcf;
+	color: white;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	padding: 6px 8px 6px 8px;
+	border: solid 1px white;
+	
+}
+
+nav a {
+	color: white;
 }
 
 /* Sign up button */
