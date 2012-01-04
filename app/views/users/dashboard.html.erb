@@ -1,13 +1,7 @@
+<div id = "dashboard_feed">
 <% if user_signed_in? %>
   <%= render 'courses/feed' %>
 <% else %>
 <%= link_to "Sign Up!", new_user_path %>
 <% end %>
-<p>Taking:</p>
-<% @enrollments.each do |enrollment| %>
-	<li><%= enrollment.course.name %> <%= enrollment.active %></li>
-<% end %>
-<br><p>Teaching</p></br>
-<% @courses.each do |course| %>
-	<li><%= course.name %></li>
-<% end %>
+</div>
