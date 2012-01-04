@@ -636,7 +636,7 @@ input, textarea {
 	float: left;
 	height: 100px;
 	width: 190px;
-	border: solid 1px #E5E5E5;
+	
 }
 
 #course_left_title {
@@ -644,7 +644,7 @@ input, textarea {
 	width: 60%;
 	height: 100px;
 	text-align: center;
-	border: solid 1px #E5E5E5;
+	
 }
 
 #course_left h1 {
@@ -656,7 +656,7 @@ input, textarea {
 	width: 100%;
 	margin-top: 10px;
 	float: left;
-	border: solid 1px #E5E5E5;
+	
 }
 
 #about_course {
@@ -738,4 +738,40 @@ input, textarea {
 #enroll_form {
 	width: 150px;
 	margin: 0 auto;
+}
+
+#course_bottom_right {
+	width: 38%;
+	padding: 1em;
+	background: white;
+	vertical-align: top;
+	color: #383838;
+	-moz-border-radius:    5px;
+	-webkit-border-radius: 5px;
+	border-radius:         5px;
+	float: right;
+	margin-top: 10px;
+	margin-right: 5px;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
+}
+
+#course_bottom_right_image {
+	float: left;
+	
+}
+
+#course_bottom_right a {
+	color: #e34747;
+}
+
+#course_bottom_right a:hover {
+	text-decoration: underline;
+}
+
+#course_options {
+	float: right;
+	width: 100px;
+	margin-right: 40px;
 }
