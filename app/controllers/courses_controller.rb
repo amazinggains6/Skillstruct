@@ -5,7 +5,7 @@ class CoursesController < ApplicationController
     state = params[:state]
     if (params[:state])
       @courses = Course.where(:state => state)
-    elsif current_user.state?
+    elsif current_user
       @courses = Course.where(:state => current_user.state)
     else
       @courses = Course.all

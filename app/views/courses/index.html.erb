@@ -5,7 +5,11 @@
 <div id = "index_right">
 	<div id = "course_filter">
 		<%= form_tag(courses_path, :method => :get) do |f| %>
+			<% if user_signed_in? %>
 			<span id = "state_filter>"><%= select_tag(:state, options_for_select(us_states, :selected => params[:state] || current_user.state)) %></span>
+			<% else %>
+			<span id = "state_filter>"><%= select_tag(:state, options_for_select(us_states)) %></span>
+			<% end %>
 			<%= submit_tag 'Filter by State' %>
 		<% end %>
 	</div>
