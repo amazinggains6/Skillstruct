@@ -60,17 +60,24 @@ footer, header, hgroup, menu, nav, section {
 display:block;
 }
 
-
 .container {
   width: 975px;
 }
 
+#header_wrapper {
+	width: 100%;
+	background: #4D4748;
+	height: 60px;
+	margin-bottom: 10px;
+}
+
 body {
-  background: #1aabcf;
+  background: #8ec1da;
 }
 
 header {
-  padding-top: 20px;
+  width: 960px;
+  margin: 0 auto;
 }
 
 header img {
@@ -80,6 +87,7 @@ header img {
 
 section {
   margin-top: 1em;
+  background: #c0deed;
   font-size: 120%;
   padding: 20px;
   width: 960px;
@@ -114,7 +122,7 @@ nav {
 }
 
 nav {
-  background-color: white;
+  background-color: #4D4748;
   padding: 0 0.7em;
   white-space: nowrap;
 }

@@ -8,8 +8,10 @@
 	"http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js"%>
 	  </head>
 	  <body>
+		<div id = "header_wrapper">
+			<%= render 'layouts/header' %>
+		</div>
 	    <div class="container">
-	      <%= render 'layouts/header' %>
 	      <section class="round">
 			<% flash.each do |key, value| %>
 			 <div class="flash <%= key %>"><%= value %></div>
