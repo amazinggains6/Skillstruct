@@ -148,7 +148,7 @@ nav ul li {
 nav ul li a {
   padding: 6px 8px 6px 8px;
   color: white;
-  font: 13px "LeagueGothicRegular", Verdana,sans-serif;
+  font: Verdana,sans-serif;
 }
 
 nav ul li a:visited {
@@ -848,7 +848,7 @@ input, textarea {
 footer nav ul li a{
   padding: 6px 8px 6px 8px;
   color: #1aabcf;
-  font: 13px "LeagueGothicRegular", Verdana,sans-serif;
+  font: Verdana,sans-serif;
 }
 
 footer nav ul li a:visited {
