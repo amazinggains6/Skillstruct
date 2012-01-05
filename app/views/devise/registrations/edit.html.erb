@@ -12,6 +12,7 @@
 	<span id = "file"><%= f.file_field :image, :label => 'Your user image' %></span>
 	<br></br>
 	<%= f.input :bio %>
+	<%= f.input :city %>
 	<%= f.input :state, :collection => (us_states), :prompt => "select your state"%>
 	<%= f.input :zipcode %>
 	<%= f.button :submit %>
