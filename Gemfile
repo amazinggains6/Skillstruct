@@ -9,7 +9,6 @@ gem 'mysql2'
 gem 'simple_form'
 gem 'rmagick'
 gem 'carrierwave'
-gem 'devise"< '~> 1.4.9'
 
 
 # Gems used only for assets and not required
@@ -47,6 +46,6 @@ group :test do
   gem 'email_spec'
 end
 
-gem 'devise', '~> 1.4.3'
+gem 'devise', '~> 1.4.9'
 
 
