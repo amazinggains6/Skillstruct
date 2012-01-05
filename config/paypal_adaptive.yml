@@ -1,0 +1,20 @@
+development:
+  environment: "sandbox"
+  username: "zksher_1325804404_biz_api1.gmail.com"
+  password: "1325804429"
+  signature: "ADQXBAe3NMd.dIOczLcDI7M0e2QRADP5A9sdCuBIoutsplQydybjkQZ2"
+  application_id: "APP-80W284485P519543T"
+
+test:
+  environment: "sandbox"
+  username: "zksher_1325804404_biz_api1.gmail.com"
+  password: "1325804429"
+  signature: "ADQXBAe3NMd.dIOczLcDI7M0e2QRADP5A9sdCuBIoutsplQydybjkQZ2"
+  application_id: "APP-80W284485P519543T"
+
+production:
+  environment: "production"
+  username: "zksher_1325804404_biz_api1.gmail.com"
+  password: "1325804429"
+  signature: "ADQXBAe3NMd.dIOczLcDI7M0e2QRADP5A9sdCuBIoutsplQydybjkQZ2"
+  application_id: "my_production_app_id"
