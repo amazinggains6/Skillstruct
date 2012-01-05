@@ -1,6 +1,5 @@
 <div id = "form">
 <%= simple_form_for @course, :html => {:multipart => true} do |f| %>
-<%= f.error_messages %>
 	<%= f.input :name %>
 	<%= f.input :description%>
 	<%= f.input :category, :collection => (categories_list)%>
