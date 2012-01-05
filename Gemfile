@@ -10,6 +10,7 @@ gem 'thin'
 gem 'simple_form'
 gem 'rmagick'
 gem 'carrierwave'
+gem 'taps'
 
 
 # Gems used only for assets and not required
