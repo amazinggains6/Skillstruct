@@ -1,6 +1,6 @@
 <p>Purchase Information</p>
 
-<p>Course Total: $<%= @course.cost %><p>
+<p>Course Total: <%= number_to_currency(@course.cost) %><p>
 	
 	<%= form_tag(enroll_course_path(@course), :method => "post") do %>
 	  <%= label_tag(:paypal_email, "Paypal Email Address")%>
