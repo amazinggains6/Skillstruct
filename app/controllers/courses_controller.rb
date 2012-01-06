@@ -68,14 +68,14 @@ class CoursesController < ApplicationController
     
     pay_request = PaypalAdaptive::Request.new
         data = {
-          "returnUrl" => "http://empty-robot-8386.herokuapp.com/",
+          "returnUrl" => "http://empty-robot-8386.herokuapp.com/courses",
           "requestEnvelope" => {"errorLanguage" => "en_US"},
           "currencyCode" => "USD",
           "receiverList" =>
                   { "receiver" => [
                     {"email" => "zksher_1325804404_biz@gmail.com", "amount"=>"10.00"}
                   ]},
-          "cancelUrl" => "http://empty-robot-8386.herokuapp.com/courses",
+          "cancelUrl" => "http://empty-robot-8386.herokuapp.com/",
           "actionType" => "PAY",
           "ipnNotificationUrl" => "http://empty-robot-8386.herokuapp.com/ipn-notification"
         }
