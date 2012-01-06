@@ -9,6 +9,7 @@ Subscripty::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   match '/dashboard', :to => 'users#dashboard'
+  match '/ipn-notification', :to => 'courses#ipn', :via => :post
   root :to => 'pages#home'
   
   resources :users do
@@ -21,6 +22,7 @@ Subscripty::Application.routes.draw do
     member do
       get :purchase
       post :enroll
+      post :ipn
     end
   end
     
