@@ -65,6 +65,7 @@ class CoursesController < ApplicationController
     @course = Course.find(params[:id])
     @user = current_user
     paypal_email = params[:paypal_email]
+    cost = @course.cost
     
     pay_request = PaypalAdaptive::Request.new
         data = {
@@ -73,7 +74,7 @@ class CoursesController < ApplicationController
           "currencyCode" => "USD",
           "receiverList" =>
                   { "receiver" => [
-                    {"email" => "zksher_1325804404_biz@gmail.com", "amount"=>@class.cost}
+                    {"email" => "zksher_1325804404_biz@gmail.com", "amount"=>cost}
                   ]},
           "cancelUrl" => "http://empty-robot-8386.herokuapp.com/",
           "actionType" => "PAY",
