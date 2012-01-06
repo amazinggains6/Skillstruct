@@ -84,7 +84,13 @@ class CoursesController < ApplicationController
 
         pay_response = pay_request.pay(data)
 
-        
+        if pay_response.success?
+            # Send user to paypal
+            redirect_to pay_response.approve_paypal_payment_url
+        else
+            puts pay_response.errors.first['message']
+            redirect_to "/", notice: "Something went wrong. Please contact support."
+        end
   end
   
 end
