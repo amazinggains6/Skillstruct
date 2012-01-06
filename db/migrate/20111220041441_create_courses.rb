@@ -6,6 +6,7 @@ class CreateCourses < ActiveRecord::Migration
       t.string    :state
       t.string    :zipcode
       t.string    :city
+      t.string    :paypal_email
       t.string    :category
       t.text      :description
       t.text      :credentials

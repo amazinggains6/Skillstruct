@@ -64,7 +64,8 @@ class CoursesController < ApplicationController
   def enroll
     @course = Course.find(params[:id])
     @user = current_user
-    paypal_email = params[:paypal_email]
+    course_email = @course.paypal_email
+    
     cost = @course.cost
     me = (cost)
     them = (cost*0.75)
@@ -77,7 +78,7 @@ class CoursesController < ApplicationController
           "receiverList" =>
                   { "receiver" => [
                     {"email" => "zksher_1325804404_biz@gmail.com", "amount"=>me, "primary" => true}, 
-                    {"email"=>"teach_1325804993_biz@gmail.com", "amount"=>them, "primary" => false}
+                    {"email"=>course_email, "amount"=>them, "primary" => false}
                   ]},
           "cancelUrl" => "http://empty-robot-8386.herokuapp.com/",
           "actionType" => "PAY",

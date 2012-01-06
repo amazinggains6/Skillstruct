@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(:version => 20111230192320) do
     t.string   "state"
     t.string   "zipcode"
     t.string   "city"
+    t.string   "paypal_email"
     t.string   "category"
     t.text     "description"
     t.text     "credentials"
