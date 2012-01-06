@@ -77,7 +77,7 @@ class CoursesController < ApplicationController
                   ]},
           "cancelUrl" => "http://empty-robot-8386.herokuapp.com/courses",
           "actionType" => "PAY",
-          "ipnNotificationUrl" => ipn_url
+          "ipnNotificationUrl" => "ipn_url"
         }
 
         #To do chained payments, just add a primary boolean flag:{“receiver”=> [{"email"=>"PRIMARY", "amount"=>"100.00", "primary" => true}, {"email"=>"OTHER", "amount"=>"75.00", "primary" => false}]}
