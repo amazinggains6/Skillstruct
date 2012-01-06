@@ -17,7 +17,7 @@
 	<%= f.input :state, :collection => (us_states)%>
 	<%= f.input :zipcode %>
 	<%= f.input :city %>
-	<%= f.input :paypal_email, :placeholder => 'user@domain.com', :label => 'Your Paypal Email Address' %>
+	<%= f.email_field :paypal_email %>
 	<%= f.button :submit %>
 	
 <% end %>
