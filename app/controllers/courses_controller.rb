@@ -73,7 +73,7 @@ class CoursesController < ApplicationController
           "currencyCode" => "USD",
           "receiverList" =>
                   { "receiver" => [
-                    {"email" => "studen_1325804930_per@gmail.co", "amount"=>"10.00"}
+                    {"email" => "zksher_1325804404_biz@gmail.com", "amount"=>"10.00"}
                   ]},
           "cancelUrl" => "http://empty-robot-8386.herokuapp.com/",
           "actionType" => "PAY",
