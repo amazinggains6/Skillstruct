@@ -55,6 +55,36 @@ class CoursesController < ApplicationController
     flash[:notice] = "Course has been deleted."
     redirect_to courses_path
   end
+  
+  def purchase
+    @course = Course.find(params[:id])
+    @user = current_user
+  end 
  
+  def enroll
+    @course = Course.find(params[:id])
+    @user = current_user
+    paypal_email = params[:paypal_email]
+    
+    pay_request = PaypalAdaptive::Request.new
+        data = {
+          "returnUrl" => "http://empty-robot-8386.herokuapp.com/",
+          "requestEnvelope" => {"errorLanguage" => "en_US"},
+          "currencyCode" => "USD",
+          "receiverList" =>
+                  { "receiver" => [
+                    {"email" => "zksher_1325804404_biz@gmail.com", "amount"=>"10.00"}
+                  ]},
+          "cancelUrl" => "http://empty-robot-8386.herokuapp.com/courses",
+          "actionType" => "PAY",
+          "ipnNotificationUrl" => ipn_url
+        }
+
+        #To do chained payments, just add a primary boolean flag:{“receiver”=> [{"email"=>"PRIMARY", "amount"=>"100.00", "primary" => true}, {"email"=>"OTHER", "amount"=>"75.00", "primary" => false}]}
+
+        pay_response = pay_request.pay(data)
+
+        
+  end
   
 end
