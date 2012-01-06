@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20111230192320) do
     t.date     "enddate"
     t.time     "endtime"
     t.integer  "attendance"
-    t.decimal  "cost",        :precision => 10, :scale => 2
+    t.integer  "cost"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -58,12 +58,12 @@ ActiveRecord::Schema.define(:version => 20111230192320) do
   add_index "relationships", ["follower_id"], :name => "index_relationships_on_follower_id"
 
   create_table "users", :force => true do |t|
-    t.string   "email",                                                                :default => "",  :null => false
-    t.string   "encrypted_password",     :limit => 128,                                :default => "",  :null => false
+    t.string   "email",                                 :default => "", :null => false
+    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                                                        :default => 0
+    t.integer  "sign_in_count",                         :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
@@ -79,9 +79,9 @@ ActiveRecord::Schema.define(:version => 20111230192320) do
     t.string   "state"
     t.string   "zipcode"
     t.string   "city"
-    t.decimal  "earnings",                              :precision => 10, :scale => 2, :default => 0.0
-    t.integer  "hours_taught",                                                         :default => 0
-    t.integer  "hours_learned",                                                        :default => 0
+    t.integer  "earnings",                              :default => 0
+    t.integer  "hours_taught",                          :default => 0
+    t.integer  "hours_learned",                         :default => 0
     t.string   "image"
   end
 

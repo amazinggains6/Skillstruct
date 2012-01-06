@@ -66,8 +66,8 @@ class CoursesController < ApplicationController
     @user = current_user
     paypal_email = params[:paypal_email]
     cost = @course.cost
-    me = cost*(1/10)
-    them = cost*(9/10)
+    me = cost
+    them = cost
     
     pay_request = PaypalAdaptive::Request.new
         data = {

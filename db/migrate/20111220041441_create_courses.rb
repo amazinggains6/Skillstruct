@@ -14,7 +14,7 @@ class CreateCourses < ActiveRecord::Migration
       t.date      :enddate
       t.time      :endtime
       t.integer   :attendance
-      t.decimal   :cost, :precision => 10, :scale => 2
+      t.integer   :cost
       t.integer   :user_id
       t.timestamps
     end
