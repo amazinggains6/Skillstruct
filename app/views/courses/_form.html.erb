@@ -17,7 +17,7 @@
 	<%= f.input :state, :collection => (us_states)%>
 	<%= f.input :zipcode %>
 	<%= f.input :city %>
-	<%= f.email_field :paypal_email %>
+	<%= f.email_field :paypal_email, :label => 'Your course image' %>
 	<%= f.button :submit %>
 	
 <% end %>
