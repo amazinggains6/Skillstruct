@@ -62,6 +62,7 @@ class PurchasesController < ApplicationController
       ipn.send_back(request.raw_post)
       @purchase = Purchase.find(params[:id])
       @user = @purchase.user
+      @course = @purchase.course
       if ipn.verified?
         logger.info "IT WORKED"
         @purchase.completed = true
