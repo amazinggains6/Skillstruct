@@ -52,7 +52,7 @@ ActiveRecord::Schema.define(:version => 20120106221610) do
     t.integer  "course_id"
     t.integer  "teacher_id"
     t.integer  "amount"
-    t.boolean  "completed"
+    t.boolean  "completed",  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

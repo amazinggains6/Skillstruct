@@ -88,7 +88,7 @@ class CoursesController < ApplicationController
         #To do chained payments, just add a primary boolean flag:{“receiver”=> [{"email"=>"PRIMARY", "amount"=>"100.00", "primary" => true}, {"email"=>"OTHER", "amount"=>"75.00", "primary" => false}]}
 
         pay_response = pay_request.pay(data)
-#pay_response is failing right now 
+
         if pay_response.success?
             # Send user to paypal
             redirect_to pay_response.approve_paypal_payment_url

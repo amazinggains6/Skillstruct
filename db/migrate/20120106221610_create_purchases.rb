@@ -5,7 +5,7 @@ class CreatePurchases < ActiveRecord::Migration
       t.integer :course_id
       t.integer :teacher_id
       t.integer :amount
-      t.boolean :completed
+      t.boolean :completed, :default => false
       t.timestamps
     end
   end

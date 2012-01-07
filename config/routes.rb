@@ -11,7 +11,7 @@ Subscripty::Application.routes.draw do
   match '/about',   :to => 'pages#about'
   match '/help',    :to => 'pages#help'
   match '/dashboard', :to => 'users#dashboard'
-  match '/ipn-notification', :to => 'courses#ipn', :via => :post
+  match '/ipn-notification', :to => 'purchases#ipn', :via => :post
   root :to => 'pages#home'
   
   resources :users do
