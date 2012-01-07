@@ -1,7 +1,9 @@
 Subscripty::Application.routes.draw do
   devise_for :users
   resources :users
-  resources :courses
+  resources :courses do
+    resources :purchases
+  end
   resources :enrollments
   resources :relationships, :only => [:create, :destroy]
   

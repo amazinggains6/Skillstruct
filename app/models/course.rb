@@ -3,7 +3,8 @@ class Course < ActiveRecord::Base
   has_many :enrollments, :dependent => :destroy
   has_many :users, :through => :enrollments, :source => "user_id"
   mount_uploader :image, ImageUploader
-  
+  has_many :purchases
+  accepts_nested_attributes_for :purchases
   default_scope :order => 'courses.created_at DESC'
   scope :from_users_followed_by, lambda { |user| followed_by(user) }
   

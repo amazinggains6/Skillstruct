@@ -1,0 +1,13 @@
+<%= form_for [@course, @purchase] do |f| %>
+	<p>
+		<%= f.hidden_field :user_id, :value => current_user.id %>
+	</p>
+	<p>
+		<%= f.hidden_field :teacher_id, :value => @course.user.id %>
+	</p>
+	<p>
+		<%= f.hidden_field :amount, :value => @course.cost %>
+	</p>
+
+	<%= f.submit %>
+<% end %>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111230192320) do
+ActiveRecord::Schema.define(:version => 20120106221610) do
 
   create_table "courses", :force => true do |t|
     t.string   "name"
@@ -46,6 +46,16 @@ ActiveRecord::Schema.define(:version => 20111230192320) do
   add_index "enrollments", ["course_id", "user_id"], :name => "index_enrollments_on_course_id_and_user_id", :unique => true
   add_index "enrollments", ["course_id"], :name => "index_enrollments_on_course_id"
   add_index "enrollments", ["user_id"], :name => "index_enrollments_on_user_id"
+
+  create_table "purchases", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.integer  "teacher_id"
+    t.integer  "amount"
+    t.boolean  "completed"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"

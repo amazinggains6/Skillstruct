@@ -34,7 +34,7 @@
 		<p><%= @course.starttime.strftime("%I:%M%p")%> - <%= @course.endtime.strftime("%I:%M%p")%><p>
 		<br><p><%= @course.place %></p></br>
 	</div>
-	<div id = "enroll_form"><%= link_to "enroll", purchase_course_path(@course) %><%= render 'enroll_form' if signed_in? %></div>
+	<div id = "enroll_form"><%= link_to "enroll", new_course_purchase_path(@course) %><%= render 'enroll_form' if signed_in? %></div>
 </div>
 
 <div id = "course_bottom_right">

@@ -8,3 +8,34 @@
 	  <%= submit_tag("Pay Now") %>
 	<% end %>
 	
+	
+	Purchase Model
+	t.id int
+	t.course_id int
+	t.user_id int
+	t.amount int
+	t.completed boolean
+	t.timestamps 
+	
+	link_to new_purchase_path(@course)
+	
+	form_for(@purchase)
+	hidden_field: course_id
+	hidden_field: current_user.id
+	hidden_field: cost
+	submit_button: Pay Now
+	
+	@purchase = params[:purchase]
+	
+	paypal_method call
+	
+	if ipn?
+		@purchase.save
+		current_user.enroll!
+		flash "congratulations"
+		
+	else
+		flash "sorry"
+		redirect_to @purchase.class
+		
+	resources :purchases
