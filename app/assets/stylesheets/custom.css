@@ -769,6 +769,24 @@ input, textarea {
 	margin: 0 auto;
 }
 
+#enroll_form a {
+	-webkit-border-radius: 5px;  
+	-moz-border-radius: 5px;
+	background: #e34747;
+	background: rgba(227, 71, 71, 1);
+	color: white;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+	width: 150px;
+}
+
+#enroll_form a:hover {
+	background: #4D4748;
+	background: rgba(77, 71, 72, 1);
+}
+
 #course_bottom_right {
 	width: 38%;
 	padding: 1em;
