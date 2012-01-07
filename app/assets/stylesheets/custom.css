@@ -780,6 +780,8 @@ input, textarea {
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
 	width: 150px;
+	padding: 10px 40px 10px 40px;
+	color: white;
 }
 
 #enroll_form a:hover {

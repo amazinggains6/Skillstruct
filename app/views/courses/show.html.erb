@@ -39,7 +39,7 @@
 	<% elsif current_user.enrolled?(@course) %>
 	<%= "Your are enrolled in this course."%>
 	<% else %>
-	<%= link_to "enroll", new_course_purchase_path(@course) %><%#render 'enroll_form' if signed_in? %>
+	<%= link_to "Enroll", new_course_purchase_path(@course) %><%#render 'enroll_form' if signed_in? %>
 	<% end %>
 	</div>
 </div>
