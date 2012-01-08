@@ -86,8 +86,7 @@ header {
 }
 
 header img {
-  padding: 1em;
-  background: #fff;
+  margin-top: 4px;
 }
 
 section {
