@@ -18,7 +18,11 @@ class CoursesController < ApplicationController
   end
   
   def new
-    @course = Course.new
+    if user_signed_in?
+      @course = Course.new
+    else
+      redirect_to new_user_registration_path
+    end
   end
   
   def create

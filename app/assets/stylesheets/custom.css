@@ -176,14 +176,14 @@ nav a {
 
 /* Home Page */
 
-#home_page {
+#home_page_top {
 	padding: 1em;
 	vertical-align: top;
-	background: #1aabcf;
+	background: white;
 	color: #383838;
 	margin: 0 auto;
-	width: 99%;
-	height: 300px;
+	width: 97%;
+	height: 275px;
 	border: 1px solid #CCC;
 	border-bottom-color: #AAA;
 	-moz-border-radius:    5px;
@@ -192,10 +192,69 @@ nav a {
 	-webkit-box-shadow: 0px 1px 2px #ccc;
 	-moz-box-shadow: 0px 1px 2px #ccc;
 	box-shadow: 0px 1px 2px #ccc;
+	background: url('teachme.jpg');
 }
 
-#home_page h1 {
+#home_page_top h1 {
 	color: white;
+}
+
+#home_page_left {
+	background: white;
+	color: #383838;
+	margin-top: 5px;
+	float: left;
+	width: 33%;
+	height: 225px;
+	border: 1px solid #CCC;
+	border-bottom-color: #AAA;
+	-moz-border-radius:    5px;
+	-webkit-border-radius: 5px;
+	border-radius:         5px;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
+	background: url('teachme2.jpg');
+}
+
+#home_page_center {
+	background: white;
+	color: #383838;
+	margin-top: 5px;
+	float: left;
+	margin-left: 5px;
+	width: 33%;
+	height: 225px;
+	border: 1px solid #CCC;
+	border-bottom-color: #AAA;
+	-moz-border-radius:    5px;
+	-webkit-border-radius: 5px;
+	border-radius:         5px;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
+	background: url('teachme1.jpg');
+}
+
+#home_page_right {
+	background: white;
+	color: #383838;
+	margin-top: 5px;
+	float: left;
+	margin-left: 5px;
+	width: 312px;
+	height: 225px;
+	border: 1px solid #CCC;
+	border-bottom-color: #AAA;
+	-moz-border-radius:    5px;
+	-webkit-border-radius: 5px;
+	border-radius:         5px;
+	-webkit-box-shadow: 0px 1px 2px #ccc;
+	-moz-box-shadow: 0px 1px 2px #ccc;
+	box-shadow: 0px 1px 2px #ccc;
+	margin-right: none;
+	padding-left: none;
+	background: url('teachme3.jpg');
 }
 
 
