@@ -1,16 +1,12 @@
 
-    <h1>Sample App</h1>
-    <p>
-      This is the home page for the
-      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
-      sample application.
-    </p>
-<%= link_to "Sign up now!", '#', :class => "signup_button round" %>
 
 <% if user_signed_in? %>
   <%= render 'courses/feed' %>
 <% else %>
-  <p>Sign Up!</p>
+  <div id = "home_page">
+	<h1>Welcome to Teach.me</h1>
+	
+  </div>
 <% end %>
 
 
