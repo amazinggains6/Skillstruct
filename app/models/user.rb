@@ -19,11 +19,7 @@ class User < ActiveRecord::Base
   has_many :followers, :through => :reverse_relationships, :source => :follower
   has_many :purchases
   
-  email_regex = /\A[\w+\-.]+@vanderbilt\.edu\z/i
   
-  validates :email, :presence => true,
-                    :format => {:with => email_regex, :message => "You must use a vanderbilt.edu email address"}, 
-                    :uniqueness => true
   
   mount_uploader :image, AvatarUploader
   
