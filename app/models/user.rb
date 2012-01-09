@@ -19,6 +19,12 @@ class User < ActiveRecord::Base
   has_many :followers, :through => :reverse_relationships, :source => :follower
   has_many :purchases
   
+  email_regex = /\A[\w+\-.]+@vanderbilt\.edu\z/i
+  
+  validates :email, :presence => true,
+                    :format => {:with => email_regex, :message => "You must use a vanderbilt.edu email address"}, 
+                    :uniqueness => true
+  
   mount_uploader :image, AvatarUploader
   
   def enroll!(course, user)
@@ -45,6 +51,10 @@ class User < ActiveRecord::Base
     user.hours_taught = user.hours_taught + ((course.endtime - course.starttime)/3600).to_i
     user.save
   end
+  
+  def unteach!(course, user)
+    user.hours_taught = user.hours_taught - ((course.endtime - course.starttime)/3600).to_i
+    user.save
   
   def following?(followed)
     relationships.find_by_followed_id(followed)

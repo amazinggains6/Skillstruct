@@ -55,6 +55,7 @@ class CoursesController < ApplicationController
   
   def destroy
     @course = Course.find(params[:id])
+    current_user.unteach!(@course, current_user)
     @course.destroy
     flash[:notice] = "Course has been deleted."
     redirect_to courses_path
