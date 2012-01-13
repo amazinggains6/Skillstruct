@@ -6,6 +6,7 @@ Subscripty::Application.routes.draw do
   end
   resources :enrollments
   resources :relationships, :only => [:create, :destroy]
+  resources :authentications
   
   match '/contact', :to => 'pages#contact'
   match '/about',   :to => 'pages#about'
