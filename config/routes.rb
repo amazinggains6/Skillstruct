@@ -1,5 +1,5 @@
 Subscripty::Application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => 'registrations'}
   resources :users
   resources :courses do
     resources :purchases

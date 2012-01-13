@@ -20,6 +20,9 @@ class User < ActiveRecord::Base
   has_many :purchases
   has_many :authentications
   
+  validates :firstname,  :presence => true, :length   => { :maximum => 50 }
+  validates :lastname,   :presence => true, :length   => { :maximum => 50 }
+  
   email_regex = /\A[\w+\-.]+@vanderbilt\.edu\z/i
   
   validates :email, :presence => true,
@@ -27,6 +30,7 @@ class User < ActiveRecord::Base
                     :uniqueness => true
   
   mount_uploader :image, AvatarUploader
+  
   
   def enroll!(course, user)
     enrollments.create!(:course_id => course.id, :active => true)
@@ -74,7 +78,12 @@ class User < ActiveRecord::Base
     Course.from_users_followed_by(self)
   end
   
-  validates :firstname,  :presence => true, :length   => { :maximum => 50 }
-  validates :lastname,   :presence => true, :length   => { :maximum => 50 }
+  def apply_omniauth(omniauth)
+    authentications.build(:provider => omniauth['provider'], :uid => omniauth['uid'])
+  end
+  
+  #def password_required?
+    #((authentications.empty? || !password.blank?) && super)
+  #end
   
 end

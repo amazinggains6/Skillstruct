@@ -1,0 +1,17 @@
+<h2>Sign up</h2>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+	<%= f.input :firstname %>
+	<%= f.input :lastname %>
+	<%= f.input :email %>
+	<%= f.input :password %>
+	<%= f.input :password_confirmation %>
+	<%= f.input :state, :collection => (us_states), :prompt => "Select your state"%>
+	<%= f.input :city %>
+	<%= f.input :zipcode %>
+	<%= f.button :submit %>
+<% end %>
+
+
+<%= render :partial => "devise/shared/links" %>
