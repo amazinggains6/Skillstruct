@@ -92,6 +92,7 @@ GEM
     formatador (0.2.1)
     gherkin (2.6.6)
       json (>= 1.4.6)
+    hashie (1.2.0)
     hike (1.2.1)
     i18n (0.6.0)
     jquery-rails (1.0.18)
@@ -110,6 +111,15 @@ GEM
       net-ssh (>= 1.99.1)
     net-ssh (2.2.2)
     nokogiri (1.5.0)
+    oauth (0.4.5)
+    omniauth (1.0.1)
+      hashie (~> 1.2)
+      rack
+    omniauth-oauth (1.0.0)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.7)
+      omniauth-oauth (~> 1.0)
     orm_adapter (0.0.5)
     paypal_adaptive (0.2.6)
       json (~> 1.6.0)
@@ -212,6 +222,7 @@ DEPENDENCIES
   factory_girl
   fog
   jquery-rails
+  omniauth-twitter
   paypal_adaptive
   pg
   rails (= 3.1.1)

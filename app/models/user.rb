@@ -18,6 +18,7 @@ class User < ActiveRecord::Base
                                      :dependent => :destroy
   has_many :followers, :through => :reverse_relationships, :source => :follower
   has_many :purchases
+  has_many :authentications
   
   email_regex = /\A[\w+\-.]+@vanderbilt\.edu\z/i
   

@@ -12,6 +12,7 @@ gem 'rmagick'
 gem 'carrierwave'
 gem 'paypal_adaptive'
 gem 'fog'
+gem 'omniauth-twitter'
 
 
 # Gems used only for assets and not required
