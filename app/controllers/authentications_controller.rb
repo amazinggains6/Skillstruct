@@ -14,9 +14,9 @@ class AuthenticationsController < ApplicationController
       user = User.new
       user.apply_omniauth(omniauth)
         if user.save
-          @twitter_user.twitter.update("My Rails 3 App with Omniauth, Devise and Twitter")
           flash[:notice] = "Signed in successfully."
           sign_in_and_redirect(:user, user)
+          current_user.twitter.update("My Rails 3 App with Omniauth, Devise and Twitter")
         else
           session[:omniauth] = omniauth.except('extra')
           redirect_to new_user_registration_url

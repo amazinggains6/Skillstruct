@@ -1,7 +1,7 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :developer unless Rails.env.production?
   provider :twitter, "eq004itbu3iNPUECSfgfjg", "VqmbAxwPslXY2xq4uTe0SrGp3CW7xrkGjNeeKjdtZw8"
-  #provider :facebook, APP_ID, APP_SECRET, {:scope => 'publish_stream,offline_access,email'}
+  provider :facebook, "335877333103157", "03c91c7a5c0e1c1434c614cedc3c1694", {:scope => 'publish_stream,offline_access,email'}
   end
   
   Twitter.configure do |config|
