@@ -13,6 +13,7 @@ gem 'carrierwave'
 gem 'paypal_adaptive'
 gem 'fog'
 gem 'omniauth-twitter'
+gem 'omniauth-facebook'
 gem 'twitter'
 gem 'fb_graph'
 
