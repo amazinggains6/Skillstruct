@@ -31,7 +31,11 @@ class CoursesController < ApplicationController
     current_user.teach!(@course, current_user)
     if @course.save
       flash[:notice] = "Course has been created."
-      current_user.twitter.update("Check out my new course on Skillstruct.")
+      #current_user.twitter.update("Check out my new course on Skillstruct.")
+      current_user.facebook.feed!(
+        :message => 'I just created a new course on skillstruct', 
+        :name => 'My Rails 3 App with Omniauth, Devise and FB_graph'
+      )
       redirect_to @course
     else
       flash[:alert] = "Course has not been created."
