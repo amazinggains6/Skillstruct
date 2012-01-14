@@ -13,6 +13,8 @@ gem 'carrierwave'
 gem 'paypal_adaptive'
 gem 'fog'
 gem 'omniauth-twitter'
+gem 'twitter'
+gem 'fb_graph'
 
 
 # Gems used only for assets and not required

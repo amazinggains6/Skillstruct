@@ -31,6 +31,7 @@ class CoursesController < ApplicationController
     current_user.teach!(@course, current_user)
     if @course.save
       flash[:notice] = "Course has been created."
+      current_user.twitter.update("Check out my new course on Skillstruct.")
       redirect_to @course
     else
       flash[:alert] = "Course has not been created."
