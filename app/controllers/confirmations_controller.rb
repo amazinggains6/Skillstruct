@@ -6,7 +6,7 @@ class ConfirmationsController < Devise::ConfirmationsController
         :message => 'I just signed up for Skillstruct.com', 
         :name => 'Skillstruct'
       )
-      @user.twitter.update("My Rails 3 App with Omniauth, Devise and Twitter")  
+       
     else
       
     end
