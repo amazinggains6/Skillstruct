@@ -6,11 +6,11 @@ class ConfirmationsController < Devise::ConfirmationsController
     @authentications.each do |authentication|
       if authentication.provider == "facebook"
         @user.facebook.feed!(
-          :message => 'I just signed up for Skillstruct.com', 
+          :message => 'I just signed up for http://Skillstruct.com/', 
           :name => 'Skillstruct'
           )
       elsif authentication.provider == "twitter"
-        @user.twitter.update("I just signed up for Skillstruct.com")
+        @user.twitter.update("I just signed up for http://Skillstruct.com/")
       else
     end 
    end 
