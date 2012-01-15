@@ -10,7 +10,7 @@ class ConfirmationsController < Devise::ConfirmationsController
           :name => 'Skillstruct'
           )
       elsif authentication.provider == "twitter"
-        @user.twitter.update("My Rails 3 App with Omniauth, Devise and Twitter")
+        @user.twitter.update("I just signed up for Skillstruct.com")
       else
     end 
    end 
